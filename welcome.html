@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>welcome!</title>
+    <link rel="stylesheet" href="lib/css/layui.css">
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+      <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="container">
+        <blockquote class="layui-elem-quote">
+            欢迎使用SeeDream后台管理系统
+        </blockquote>
+        <p>登录次数：18</p>
+        <p>上次登陆时间：2017-01-01 11:19:55  上次登录IP：222.35.131.79.1</p>
+        <div id="log" style="width:100%;height:600px;">
+
+        </div>
+        <fieldset class="layui-elem-field layui-field-title site-title">
+            <legend>信息统计</legend>
+        </fieldset>
+
+        <table class="layui-table">
+            <thead>
+                <tr>
+                    <th>统计</th>
+                    <th>新闻</th>
+                    <th>商品</th>
+                    <th>DIY</th>
+                    <th>用户</th>
+                    <th>管理员</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>总数</td>
+                    <td>92</td>
+                    <td>9</td>
+                    <td>0</td>
+                    <td>8</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>今日</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>昨日</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>本周</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>本月</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="layui-table">
+            <thead>
+                <tr>
+                    <th colspan="2" scope="col">服务器信息</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th width="30%">服务器计算机名</th>
+                    <td><span id="lbServerName">http://127.0.0.1/</span></td>
+                </tr>
+                <tr>
+                    <td>服务器IP地址</td>
+                    <td>192.168.1.1</td>
+                </tr>
+                <tr>
+                    <td>服务器域名</td>
+                    <td>www.royalplatform.cn</td>
+                </tr>
+                <tr>
+                    <td>服务器端口 </td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>服务器Apache版本 </td>
+                    <td>6.0</td>
+                </tr>
+                <tr>
+                    <td>本文件所在文件夹 </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>服务器操作系统 </td>
+                    <td>Microsoft Windows NT 5.2.3790 Service Pack 2</td>
+                </tr>
+                <tr>
+                    <td>系统所在文件夹 </td>
+                    <td>C:\WINDOWS\system64</td>
+                </tr>
+                <tr>
+                    <td>服务器脚本超时时间 </td>
+                    <td>30000秒</td>
+                </tr>
+                <tr>
+                    <td>服务器的语言种类 </td>
+                    <td>Chinese (People's Republic of China)</td>
+                </tr>
+                <tr>
+                    <td>.NET Framework 版本 </td>
+                    <td>2.050727.3655</td>
+                </tr>
+                <tr>
+                    <td>服务器当前时间 </td>
+                    <td>2017-01-01 12:06:23</td>
+                </tr>
+                <tr>
+                    <td>服务器IE版本 </td>
+                    <td>6.0000</td>
+                </tr>
+                <tr>
+                    <td>服务器上次启动到现在已运行 </td>
+                    <td>7210分钟</td>
+                </tr>
+                <tr>
+                    <td>逻辑驱动器 </td>
+                    <td>C:\D:\</td>
+                </tr>
+                <tr>
+                    <td>CPU 总数 </td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>CPU 类型 </td>
+                    <td>x86 Family 6 Model 42 Stepping 1, GenuineIntel</td>
+                </tr>
+                <tr>
+                    <td>虚拟内存 </td>
+                    <td>52480M</td>
+                </tr>
+                <tr>
+                    <td>当前程序占用内存 </td>
+                    <td>3.29M</td>
+                </tr>
+                <tr>
+                    <td>php所占内存 </td>
+                    <td>51.46M</td>
+                </tr>
+                <tr>
+                    <td>当前Session数量 </td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>当前SessionID </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>当前系统用户名 </td>
+                    <td>admin</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="lib/layui.js"></script>
+    <script src="./js/echarts.min.js"></script>
+    <script src="js/base.js"></script>
+    <script>
+        
+        var myChart = echarts.init(document.getElementById('log'));
+
+         
+        data = [["2000-06-05",116],["2000-06-06",129],["2000-06-07",135],["2000-06-08",86],["2000-06-09",73],["2000-06-10",85],["2000-06-11",73],["2000-06-12",68],["2000-06-13",92],["2000-06-14",130],["2000-06-15",245],["2000-06-16",139],["2000-06-17",115],["2000-06-18",111],["2000-06-19",309],["2000-06-20",206],["2000-06-21",137],["2000-06-22",128],["2000-06-23",85],["2000-06-24",94],["2000-06-25",71],["2000-06-26",106],["2000-06-27",84],["2000-06-28",93],["2000-06-29",85],["2000-06-30",73],["2000-07-01",83],["2000-07-02",125],["2000-07-03",107],["2000-07-04",82],["2000-07-05",44],["2000-07-06",72],["2000-07-07",106],["2000-07-08",107],["2000-07-09",66],["2000-07-10",91],["2000-07-11",92],["2000-07-12",113],["2000-07-13",107],["2000-07-14",131],["2000-07-15",111],["2000-07-16",64],["2000-07-17",69],["2000-07-18",88],["2000-07-19",77],["2000-07-20",83],["2000-07-21",111],["2000-07-22",57],["2000-07-23",55],["2000-07-24",60]];
+
+        var dateList = data.map(function (item) {
+            return item[0];
+        });
+        var valueList = data.map(function (item) {
+            return item[1];
+        });
+
+        option = {
+             // Make gradient line here
+            visualMap: [{
+                show: false,
+                type: 'continuous',
+                seriesIndex: 0,
+                min: 0,
+                max: 400
+            }, {
+                show: false,
+                type: 'continuous',
+                seriesIndex: 1,
+                dimension: 0,
+                min: 0,
+                max: dateList.length - 1
+            }],
+
+
+            title: [{
+                left: 'center',
+                text: '本周访问量'
+            }, {
+                top: '55%',
+                left: 'center',
+                text: '本月访问量'
+            }],
+            tooltip: {
+                trigger: 'axis'
+            },
+            xAxis: [{
+                data: dateList
+            }, {
+                data: dateList,
+                gridIndex: 1
+            }],
+            yAxis: [{
+                splitLine: {show: false}
+            }, {
+                splitLine: {show: false},
+                gridIndex: 1
+            }],
+            grid: [{
+                bottom: '60%'
+            }, {
+                top: '60%'
+            }],
+            series: [{
+                type: 'line',
+                showSymbol: false,
+                data: valueList
+            }, {
+                type: 'line',
+                showSymbol: false,
+                data: valueList,
+                xAxisIndex: 1,
+                yAxisIndex: 1
+            }]
+        };
+        myChart.setOption(option);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+@charset "utf-8";
+.layui-layout-admin .layui-logo{
+    color: #5FB878;
+}
+.layui-layout-admin .layui-body{
+    position: fixed;
+    left: 200px;
+}
+
+.x-slide_left{
+    width: 17px;
+    height: 61px;
+    background:  url(../img/icon.png) 0 0 no-repeat;
+    position: absolute;
+    top: 200px;
+    left: 0px;
+    cursor: pointer;
+ }
+.layui-layout-left{
+    display: block;
+}
+.s-iframe{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    padding: 0 20px 20px 20px;
+}
+.layui-tab{
+    height: 100%;
+}
+.layui-tab{
+    margin: 0;
+}
+.layui-tab-item{
+    height: 100%;
+}
+body .layui-layout-admin .site-demo{
+    height: 100%;
+}
+.layui-form-pane .layui-form-label{
+    width: 90px;
+}
+.layui-form-item .layui-input-inline{
+    width: 150px;
+}
+.s-right{
+    float: right;
+}
+
+ @media screen and (max-width:768px){
+    .layui-layout-left{
+        display: none;
+    }
+ }
