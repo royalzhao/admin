@@ -17,18 +17,18 @@ layui.use('element', function(){
     if($(window).width() <768){
         trun = 0;
         $('.x-slide_left').css('background-position','0px -61px');
-        $('.x-side').animate({left:'-200px'},200).siblings('.x-main').animate({left:'0'},200);
+        $('.x-side').animate({left:'-200px'},200).siblings('.s-main').animate({left:'0'},200);
     }else{
         trun = 1;
-        $('.x-side').animate({left:'0px'},200).siblings('.x-main').animate({left:'200px'},200);
+        $('.x-side').animate({left:'0px'},200).siblings('.s-main').animate({left:'200px'},200);
     }
     $('.x-slide_left').click(function(event){
         if(trun){
-            $('.x-side').animate({left:'-200px'},200).siblings('.x-main').animate({left:'0'},200);
+            $('.x-side').animate({left:'-200px'},200).siblings('.s-main').animate({left:'0'},200);
             $(this).css('background-position','0px -61px');
             trun = 0;
         }else{
-            $('.x-side').animate({left:'0px'},200).siblings('.x-main').animate({left:'200px'},200);
+            $('.x-side').animate({left:'0px'},200).siblings('.s-main').animate({left:'200px'},200);
             $(this).css('background-position','0px 0px');
             trun = 1;
         }

@@ -44,7 +44,7 @@
                                 <div class="layui-form-item">
                                     <label class="layui-form-label">结束日期</label>
                                     <div class="layui-input-inline">
-                                    <input class="layui-input" placeholder="" id="LAY_demorange_s">
+                                    <input class="layui-input" placeholder="" id="LAY_demorange_e">
                                     </div>
                                 </div>
                             </div>    
@@ -54,7 +54,7 @@
                                 <div class="layui-form-item">
                                     <label class="layui-form-label">标题</label>
                                     <div class="layui-input-inline">
-                                    <input class="layui-input" placeholder="" id="LAY_demorange_s">
+                                    <input class="layui-input" placeholder="" autocomplete="off">
                                     </div>
                                 </div>
                             </div>    
@@ -143,45 +143,26 @@
     <script>
         layui.use(['laydate','element','laypage','layer'],function(){
             $ = layui.jquery;
-            laydate = layui.laydate;//日期插件
-            lement = layui.element();//面包导航
-            laypage = layui.laypage;//分页
-            layer = layui.layer//弹出层
+            var laydate = layui.laydate;//日期插件
+            var element = layui.element;//面包导航
+            var laypage = layui.laypage;//分页
+            var layer = layui.layer//弹出层
 
             //以上模块需要引用
-            laypage({
-                cont:'page',
-                pages:100,
-                first:1,
-                prev:'<em><</em>',
-                next:'<em>></em>'
+            //执行一个laypage实例
+            laypage.render({
+                elem: 'page' //注意，这里的 test1 是 ID，不用加 # 号
+                ,count: 50 //数据总数 //从服务端得到
             });
-
-            var start = {
-                min:laydate.now(),
-                max:'2099-06-16 23:59:59',
-                istoday:false,
-                choose:function(datas){
-                    end.min = datas; //开始日选好后，重置结束日的最小日期
-                    end.start = datas //将结束日的初始值设定为开始日
-                }
-            };
-            var end = {
-                min: laydate.now()
-                ,max: '2099-06-16 23:59:59'
-                ,istoday: false
-                ,choose: function(datas){
-                  start.max = datas; //结束日选好后，重置开始日的最大日期
-                }
-            };
-            document.getElementById('LAY_demorange_s').onclick = function(){
-                start.elem = this;
-                laydate(start);
-            }
-            document.getElementById('LAY_demorange_e').onclick = function(){
-                end.elem = this
-                laydate(end);
-            }
+            
+           
+            laydate.render({ 
+                elem: '#LAY_demorange_s'
+            });
+            laydate.render({ 
+                elem: '#LAY_demorange_e'
+            });
+            
         });
 
         //批量删除提交
@@ -191,7 +172,7 @@
                 layer.msg('删除成功', {icon: 1});
             })
         }
-        function question_show (argument) {
+        function question_show(argument) {
             layer.msg('可以跳到前台具体问题页面',{icon:1,time:1000});
         }
 
