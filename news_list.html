@@ -65,7 +65,7 @@
                     </div>
                </form>
             </div>
-            <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon">&#xe640;</i>批量删除</button><button class="layui-btn" onclick="question_add('添加问题','question-add.html','600','500')"><i class="layui-icon">&#xe608;</i>添加</button><span class="s-right" style="line-height:40px">共有数据：88 条</span>
+            <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon">&#xe640;</i>批量删除</button><button class="layui-btn" onclick="news_add('添加问题','news_add.html','600','500')"><i class="layui-icon">&#xe608;</i>添加</button><span class="s-right" style="line-height:40px">共有数据：88 条</span>
             <table class="layui-table">
                 <thead>
                     <tr>
@@ -121,11 +121,11 @@
                             34
                         </td>
                         <td class="td-manage">
-                            <a title="编辑" href="javascript:;" onclick="question_edit('编辑','question-edit.html','4','','510')"
+                            <a title="编辑" href="javascript:;" onclick="news_edit('编辑','news_edit.html','4','','510')"
                             class="ml-5" style="text-decoration:none">
                                 <i class="layui-icon">&#xe642;</i>
                             </a>
-                            <a title="删除" href="javascript:;" onclick="question_del(this,'1')" 
+                            <a title="删除" href="javascript:;" onclick="news_del(this,'1')" 
                             style="text-decoration:none">
                                 <i class="layui-icon">&#xe640;</i>
                             </a>
@@ -177,15 +177,15 @@
         }
 
         /*添加*/
-        function question_add(title,url,w,h){
+        function news_add(title,url,w,h){
             x_admin_show(title,url,w,h);
         }
         //编辑 
-        function question_edit (title,url,id,w,h) {
+        function news_edit (title,url,id,w,h) {
             x_admin_show(title,url,w,h); 
         }
         /*删除*/
-        function question_del(obj,id){
+        function news_del(obj,id){
             layer.confirm('确认要删除吗？',function(index){
                 //发异步删除数据
                 $(obj).parents("tr").remove();

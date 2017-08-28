@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>add</title>
+    <link rel="stylesheet" href="lib/css/layui.css">
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+      <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="s-body">
+        <form class="layui-form layui-form-pane">
+            <div class="layui-form-item">
+                <label for="newsTitle" class="layui-form-label">
+                    标题
+                </label>
+                <div class="layui-input-block">
+                    <input type="text" name="newsTitle" id="newsTitle" required lay-verify="title" autocomplete="off" class="layui-input" value="新闻标题">
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <div class="layui-input-block">
+                    <textarea name="newsContent" id="newsContent" placeholder="请输入内容" class="layui-textarea fly-editor" style="height:260px">
+                        新闻内容
+                    </textarea>
+                </div>
+                <label for="newsContent" class="layui-form-label"></label>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">所在类别</label>
+                    <div class="layui-input-block">
+                        <select name="cid" lay-verify="required">
+                            <option value=""></option>
+                            <optgroup label="新闻资讯">
+                                <option value="0">公司成就</option>
+                                <option value="0">新闻动态</option>
+                                <option value="0">菜品上新</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <button class="layui-btn" lay-filter="save" lay-submit="">立即发布</button>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="lib/layui.js"></script>
+    <script src="js/x-layui.js"></script>
+    <script>
+        layui.use(['form','layer','layedit'],function(){
+            $ = layui.jquery;
+            var form = layui.form;
+            var layer = layui.layer;
+            var layedit = layui.layedit;
+
+            layedit.set({
+                uploadImage:{
+                    url:"./upimg.json",//接口url
+                    type:'post'
+                }
+            })
+
+            //创建一个编辑器
+            editIndex = layedit.build('newsContent');
+
+            //监听提交
+            form.on('submit(save)',function(data){
+                //异步提交数据给后端
+                layer.alert('修改成功',{icon:6},function(){
+                    //获取iframe索引
+                    var index = parent.layer.getFrameIndex(window.name);
+                    //关闭当前frame
+                    console.log(index)
+                    parent.layer.close(index);
+                })
+                return false;
+            })
+
+        })
+    </script>
+</body>
+</html>

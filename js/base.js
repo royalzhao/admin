@@ -35,7 +35,7 @@ layui.use('element', function(){
     })
 
     //监听导航点击
-    element.on('nav(side)',function(elem){
+    element.on('nav',function(elem){
         title = elem.find('cite').text();
     	url = elem.find('a').attr('_href');
     	// alert(url);
@@ -50,11 +50,11 @@ layui.use('element', function(){
     	res = element.tabAdd('s-tab', {
 	        title: title//用于演示
             ,content: '<iframe frameborder="0" src="'+url+'" class="s-iframe"></iframe>'
-            ,id: title
+            ,id: $('.layui-tab-title li').length
 		    });
 
  
-        element.tabChange('s-tab', title);
+        element.tabChange('s-tab', $('.layui-tab-title li').length-1);
 
     	$('.layui-tab-title li').eq(0).find('i').remove();
 
