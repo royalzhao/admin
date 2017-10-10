@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>后台管理系统登录</title>
+    <link rel="stylesheet" href="lib/css/layui.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        body{
+            background: #333;
+            overflow-y: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="header">
+            <div class="headerRight">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="loginBody">
+            <h1>SeeDream Admin</h1>
+            <div class="layui-container">
+                <div class="loginAccount">
+                    <i class="icon layui-icon">&#xe612;</i>
+                    <div class="input">
+                        <input type="text" placeholder="账户" id="account" name="account">
+                    </div>
+                </div>
+                <div class="loginAccount">
+                    <i class="icon layui-icon">&#xe64c;</i>
+                    <div class="input">
+                        <input type="password" placeholder="密码" id="password" name="password">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <h1>登录</h1>
+        </div>
+    </div>
+
+    
+
+    <script src="lib/layui.js"></script>
+    <script src="js/base.js"></script>
+</body>
+</html>

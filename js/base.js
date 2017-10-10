@@ -61,5 +61,15 @@ layui.use('element', function(){
     });
 
     $('.home i').css('display','none');
+
+    $(".login .header .headerRight span:nth-of-type(1)").click(function(){
+        $('body').css("background","#333");
+    })
+    $(".login .header .headerRight span:nth-of-type(2)").click(function(){
+        $('body').css("background","#019688");
+    })
+    $(".login .header .headerRight span:nth-of-type(3)").click(function(){
+        $('body').css("background","#D3D916");
+    })
     
 });
